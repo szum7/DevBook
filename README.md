@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Frontend website performance optimization](#frontend-opt)
-  - [Optimizing the CRP](#opt-the-CRP)
+  - [Optimizing the CRP](#optimizing-the-CRP)
 - [Test heading](#test-heading)
 
 ## Frontend website performance optimization
