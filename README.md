@@ -1,10 +1,17 @@
 # DevBook
 
+## Table of contents
+
+- [Frontend website performance optimization](#frontend-opt)
+  - [Optimizing the CRP](#opt-the-CRP)
+- [Test heading](#test-heading)
+
 ## Frontend website performance optimization
 
 ### Optimizing the CRP
 
 **Critical Rendering Path**
+
 Critical resources, Critical Bytes, CRP length
 
 **Preload scanner** 
@@ -19,4 +26,6 @@ Több script esetén hasznos. (script1, script2) Ha nem lenne, script1-nél rend
     <script src="script2.js"></script>
   ...
 ```
+
+## Test heading
 
