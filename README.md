@@ -2,9 +2,14 @@
 
 ## Table of contents
 
-- [Frontend website performance optimization](#frontend-opt)
+- [Frontend website performance optimization](#frontend-website-performance-optimization)
   - [Optimizing the CRP](#optimizing-the-CRP)
 - [Test heading](#test-heading)
+
+## Github
+
+### Formatting the README.md
+**Table of contents links** `- [Heading title whatever](#heading-title)` The #heading-title must be the same as the heading. (Uppercase becomes lowercase, space becomes "-".)
 
 ## Frontend website performance optimization
 
