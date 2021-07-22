@@ -4,8 +4,8 @@
 
 ### Optimizing the CRP
 
-**Critical Rendering Path
-![image](https://user-images.githubusercontent.com/14003021/126664969-b83d5b93-b7dc-4c58-bc9a-1e9cae8a9c91.png)
+**Critical Rendering Path**
+Critical resources, Critical Bytes, CRP length
 
 **Preload scanner** 
 
