@@ -6,6 +6,40 @@
   - [Optimizing the CRP](#optimizing-the-CRP)
 - [Test heading](#test-heading)
 
+## Web
+
+### API
+- Application Program Interface
+- Contact provided by one piece of software to another
+- Structured request and response
+- (You're sitting at a table in a restaurant, the kitchen is the foreign software, and the waiter is the API)
+
+#### RESTful API
+- Representational State Transfer
+- **Architecture style** for designing networked applications
+- Relies on a **stateless**, **client-server** protocol, almost always **HTTP**
+- Treats server objects as resources that can be created or destroyed
+- Can be used by virtually any programming language
+
+**HTTP methods**
+- **GET**: Retrieve data from a specified resource (You could use GET instead of POST but the data you send (parameters) can be seen by everyone, so it's not really secure.)
+- **POST**: Submit data to be processed to a specified resource
+- **PUT**: Update a specified resource. (Usually need to send an id) Data is sent along with the request, just like with POST. You can's PUT with a form, you need to use ajax or some other framework solution.
+- **DELETE**: Delete a specified resource. (Also needs an id)
+- HEAD: (rare) Same as GET but does not return a body.
+- OPTIONS: (rare) Returns the supported HTTP methods of the server.
+- PATCH: (rare) Update partial resources.
+
+**Authentication**
+
+Some API's require authentication use their service. This could be free or paid. OAUTH is a common authentication.<br>
+Some examples using curl to request the URLs and set parameters:
+```
+curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com  // Sending the token inside the header
+curl https://api.github.com/?access_token=OAUTH-TOKEN  // Send the token in the url
+curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  // Send not the token, but the generated client id and secret
+```
+
 ## Github
 
 ### Formatting the README.md
