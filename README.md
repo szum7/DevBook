@@ -5,6 +5,7 @@
 - [Frontend website performance optimization](#frontend-website-performance-optimization)
   - [Optimizing the CRP](#optimizing-the-CRP)
 - [Test heading](#test-heading)
+- [TODO](#todo)
 
 ## Web
 
@@ -67,4 +68,11 @@ Több script esetén hasznos. (script1, script2) Ha nem lenne, script1-nél rend
 ```
 
 ## Test heading
+
+## TODO
+- Code metrics
+- Unit/component/integration tests
+- SOLID
+- GRASP
+- end-to-end automated acceptance tests?
 
