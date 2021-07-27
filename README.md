@@ -2,9 +2,13 @@
 
 ## Table of contents
 
+- [Web](#web)
+  - [API](#api)
+   - [RESTful API](#restful-api)
+- [Github](#github)
 - [Frontend website performance optimization](#frontend-website-performance-optimization)
+  - [Render tree](#render-tree)
   - [Optimizing the CRP](#optimizing-the-CRP)
-- [Test heading](#test-heading)
 - [TODO](#todo)
 
 ## Web
@@ -48,7 +52,8 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 
 ## Frontend website performance optimization
 
-### Making a frame
+### Render tree
+Making a frame.
 1.  GET / HTTP / 1.1 request to a server
 2.  Server responds with an HTML
 3.  Browser does some look-ahead parsing and gives us nodes (html, head, link, body, section, h1, script, etc.). In Chrome devtools, it shows as "Parse HTML"
@@ -75,8 +80,6 @@ Több script esetén hasznos. (script1, script2) Ha nem lenne, script1-nél rend
     <script src="script2.js"></script>
   ...
 ```
-
-## Test heading
 
 ## TODO
 - Code metrics
