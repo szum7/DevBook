@@ -48,6 +48,15 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 
 ## Frontend website performance optimization
 
+### Making a frame
+1.  GET / HTTP / 1.1 request to a server
+2.  Server responds with an HTML
+3.  Browser does some look-ahead parsing and gives us nodes (html, head, link, body, section, h1, script, etc.). In Chrome devtools, it shows as "Parse HTML"
+4.  DOM gets created
+5.  meanwhile, CSS gets involved
+6.  DOM + CSS <- Chrome devtools: "Recalculate style"
+7.  The **Render Tree** gets created (DOM + CSS). It's similar to the DOM tree, but CSS is applied to it. E.g.: _display: none;_ removes a node and _selector:after { content: "xyz" }_ adds a node.
+
 ### Optimizing the CRP
 
 **Critical Rendering Path**
