@@ -7,7 +7,7 @@
     - [RESTful API](#restful-api)
 - [Github](#github)
 - [Frontend website performance optimization](#frontend-website-performance-optimization)
-  - [Render tree](#render-tree)
+  - [Rendering a website](#render-a-website)
   - [Optimizing the CRP](#optimizing-the-CRP)
 - [TODO](#todo)
 
@@ -52,15 +52,19 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 
 ## Frontend website performance optimization
 
-### Render tree
+### Rendering a website
 Making a frame.
 1.  GET / HTTP / 1.1 request to a server
 2.  Server responds with an HTML
 3.  Browser does some look-ahead parsing and gives us nodes (html, head, link, body, section, h1, script, etc.). In Chrome devtools, it shows as "Parse HTML"
 4.  DOM gets created
 5.  meanwhile, CSS gets involved
-6.  DOM + CSS <- Chrome devtools: "Recalculate style"
+6.  DOM + CSS <- Chrome devtools: "**Recalculate style**"
 7.  The **Render Tree** gets created (DOM + CSS). It's similar to the DOM tree, but CSS is applied to it. E.g.: _display: none;_ removes a node and _selector:after { content: "xyz" }_ adds a node.
+8.  Chrome devtools: "**Layout**" - translate the render tree to boxes
+9.  Rasterizer process: Vectors (the boxes, shapes) to pixels. (drawRoundedRectangle, restore, drawPath, save, clipRoundedRectangle, drawBitmap, etc.). Chrome devtools: "**Paint**".
+10.  Chrome devtools: "**Image Decode + Resize**" (it may need to be resized)
+11.  Chrome devtools: "**Composite Layers**". Websites have multiple layers. The process also includes loading work done from the CPU to the GPU. The GPU is instructed to put the render up the screen.
 
 ### Optimizing the CRP
 
