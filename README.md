@@ -55,10 +55,10 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 ### App Lifecycles
 
 **LIAR/RAIL**: Load, Idle, Animation, Response.<br>
-Load - 1s. Download and render your critical resources here.<br>
-Idle - 50ms. The user needs some time to take in the page. No interactions while this is happening, the page is idle.<br>
-Response - The user does something, and the site needs to respond in <= **100ms**.<br>
-Animation - 16ms. **10-12ms** with the browser overhead.<br>
+- _Load_ - 1s. Download and render your critical resources here.<br>
+- _Idle_ - 50ms. The user needs some time to take in the page. No interactions while this is happening, the page is idle.<br>
+- _Response_ - The user does something, and the site needs to respond in <= **100ms**.<br>
+- _Animation_ - 16ms. **10-12ms** with the browser overhead.<br>
 <br>
 **FLIP**: First, Last, Invert, Play<br>
 <br>
