@@ -52,6 +52,122 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 
 ## Frontend website performance optimization
 
+### App Lifecycles
+
+**LIAR/RAIL**: Load, Idle, Animation, Response.<br>
+Load - 1s. Download and render your critical resources here.<br>
+Idle - 50ms. The user needs some time to take in the page. No interactions while this is happening, the page is idle.<br>
+Response - The user does something, and the site needs to respond in <= **100ms**.<br>
+Animation - 16ms. **10-12ms** with the browser overhead.<br>
+<br>
+**FLIP**: First, Last, Invert, Play<br>
+<br>
+<p align="center">Table of time allowances for different tasks</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Response</th>
+      <th>Animation</th>
+      <th>Idle</th>
+      <th>Load</th>
+    </tr>
+    <tr>
+      <th>Threshold</th>
+      <th>100ms</th>
+      <th>10ms</th>
+      <th>50ms chunks</th>
+      <th>1000ms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Asset load / parse</td>
+      <td>Avoid</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>400ms</td>
+    </tr>
+    <tr>
+      <td>JS: Parse</td>
+      <td>Avoid</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>30ms</td>
+    </tr>
+    <tr>
+      <td>JS: Execute</td>
+      <td>15ms</td>
+      <td>3ms</td>
+      <td>Unknown</td>
+      <td>60ms</td>
+    </tr>
+    <tr>
+      <td>JS: GC</td>
+      <td>Avoid</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>20ms</td>
+    </tr>
+    <tr>
+      <td>Blink: Style Calcs</td>
+      <td>10ms</td>
+      <td>1ms</td>
+      <td>Unknown</td>
+      <td>25ms</td>
+    </tr>
+    <tr>
+      <td>Blink: Layout</td>
+      <td>15ms</td>
+      <td>3ms</td>
+      <td>Unknown</td>
+      <td>90ms</td>
+    </tr>
+    <tr>
+      <td>Blink: Layer Management</td>
+      <td>10ms</td>
+      <td>2ms</td>
+      <td>Unknown</td>
+      <td>10ms</td>
+    </tr>
+    <tr>
+      <td>Blink: Paint</td>
+      <td>5ms</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>20ms</td>
+    </tr>
+    <tr>
+      <td>Compositor: Rasterize</td>
+      <td>5ms</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>100ms</td>
+    </tr>
+    <tr>
+      <td>Compositor: Image Decode</td>
+      <td>30ms</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>180ms</td>
+    </tr>
+    <tr>
+      <td>Compositor: Image Resize</td>
+      <td>Avoid</td>
+      <td>Avoid</td>
+      <td>Unknown</td>
+      <td>55ms</td>
+    </tr>
+    <tr>
+      <td>Composite</td>
+      <td>10ms</td>
+      <td>2ms</td>
+      <td>Unknown</td>
+      <td>10ms</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Rendering a website
 Making a frame.
 1.  GET / HTTP / 1.1 request to a server
