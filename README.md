@@ -58,8 +58,8 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 - _Load_ - 1s. Download and render your critical resources here.<br>
 - _Idle_ - 50ms. The user needs some time to take in the page. No interactions while this is happening, the page is idle.<br>
 - _Response_ - The user does something, and the site needs to respond in <= **100ms**.<br>
-- _Animation_ - 16ms. **10-12ms** with the browser overhead.<br>
-<br>
+- _Animation_ - 16ms. **10-12ms** with the browser overhead.
+
 **FLIP**: First, Last, Invert, Play<br>
 <br>
 <p align="center">Table of time allowances for different tasks</p>
@@ -207,4 +207,5 @@ Több script esetén hasznos. (script1, script2) Ha nem lenne, script1-nél rend
 - SOLID
 - GRASP
 - end-to-end automated acceptance tests?
+- FLIP nek utánanézni, mi is az
 
