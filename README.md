@@ -279,4 +279,6 @@ requestAnimationFrame(animate);
 - GRASP
 - end-to-end automated acceptance tests?
 - FLIP nek utánanézni, mi is az
+- Webworkers (JS)
+- Memeory management (JS)
 
