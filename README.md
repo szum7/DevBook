@@ -1,15 +1,24 @@
 # DevBook
 
+<br>
+
 ## Table of contents
 
 - [Web](#web)
   - [API](#api)
     - [RESTful API](#restful-api)
 - [Github](#github)
+  - [Formatting the README.md](#formatting-the-README-md)
 - [Frontend website performance optimization](#frontend-website-performance-optimization)
+  - [App Lifecycles](#App-Lifecycles)
   - [Rendering a website](#render-a-website)
   - [Optimizing the CRP](#optimizing-the-CRP)
+  - [Javascript](#Javascript)
+    - [JIT](#JIT)
+    - [Animation optimization](#Animation-optimization)
 - [TODO](#todo)
+
+<br>
 
 ## Web
 
@@ -44,6 +53,7 @@ curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com  // Sending th
 curl https://api.github.com/?access_token=OAUTH-TOKEN  // Send the token in the url
 curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  // Send not the token, but the generated client id and secret
 ```
+<br>
 
 ## Github
 
@@ -51,6 +61,7 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 **Table of contents links** `- [Heading title whatever](#heading-title)` The #heading-title must be the same as the heading. (Uppercase becomes lowercase, space becomes "-".)
 
 
+<br>
 
 ## Frontend website performance optimization
 
@@ -178,7 +189,7 @@ Try to fit all the work - JavaScript->Style->Layout->Paint->Composite - into 10-
 </table>
 
 ### Rendering a website
-Making a frame.
+Making a frame:
 1.  GET / HTTP / 1.1 request to a server
 2.  Server responds with an HTML
 3.  Browser does some look-ahead parsing and gives us nodes (html, head, link, body, section, h1, script, etc.). In Chrome devtools, it shows as "Parse HTML"
@@ -259,6 +270,7 @@ function animate() {
 }
 requestAnimationFrame(animate);
 ```
+<br>
 
 ## TODO
 - Code metrics
