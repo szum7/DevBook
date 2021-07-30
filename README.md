@@ -50,6 +50,8 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 ### Formatting the README.md
 **Table of contents links** `- [Heading title whatever](#heading-title)` The #heading-title must be the same as the heading. (Uppercase becomes lowercase, space becomes "-".)
 
+
+
 ## Frontend website performance optimization
 
 ### App Lifecycles
@@ -60,8 +62,15 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 - _Response_ - The user does something, and the site needs to respond in <= **100ms**.<br>
 - _Animation_ - 16ms. **10-12ms** with the browser overhead.
 
-**FLIP**: First, Last, Invert, Play<br>
+1000s / 60 fps = 16 ms => 10-12 ms width browser overhead.
+Try to fit all the work - JavaScript->Style->Layout->Paint->Composite - into 10-12 ms to meet 60 fps.<br>
+
 <br>
+
+**FLIP**: First, Last, Invert, Play<br>
+
+<br>
+
 <p align="center">Table of time allowances for different tasks</p>
 <table align="center">
   <thead>
@@ -199,6 +208,56 @@ Több script esetén hasznos. (script1, script2) Ha nem lenne, script1-nél rend
     <script src="script1.js"></script>
     <script src="script2.js"></script>
   ...
+```
+
+### Javascript
+
+#### JIT
+Javascript code you write isn't actually the code that runs. Modern JS engines recompile it through a Just In Time compiler to make it faster.<br>
+Example
+
+```Javascript
+for (var i = 0; i < 1e5; i++) sum += v.foo(i);
+return sum;
+```
+
+Translated to Chrome V8 javascript engine
+```
+B0
+v0  BlockEntry
+s72 Constant 1 [1, 1]
+t15 Constant 0x5a8080b1 <true> boolean
+t5  Constant 0x5a808091 <undefined>
+t1  Context
+t2  Parameter 0
+t3  Parameter 1
+v6  Simulate id=2 var[4] = t5, var[3] = t5, var[2] = t1, var[1...
+v7  Goto B1
+
+B1
+v8  BlockEntry
+...
+```
+
+Because of this, you don't know if any **micro-optimization** you do will actually make the code faster. JIT might "overwrite" your code. (Of course, optimization is still desired.)
+
+```Javascript
+for (var i = 0; i < len; i++) ...
+OR
+while (++i < len) ...
+```
+
+#### Animation optimization
+**requestAnimationFrame**
+The browser's takes care of when and how the animation should be run.<br>
+All browser supports requestAnimationFrame, except IE 9. (Use polyfill for IE9, https://gist.github.com/paulirish/1579671)<br>
+How to use it:
+```Javascript
+function animate() {
+  // Do something
+  requestAnimationFrame(nextAnimation);
+}
+requestAnimationFrame(animate);
 ```
 
 ## TODO
