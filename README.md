@@ -20,6 +20,20 @@
 
 <br>
 
+## Npm
+
+### Useful commands
+
+```npm install``` This command installs a package, and any packages that it depends on. If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that, with an npm-shrinkwrap.json taking precedence if both files exist. [Source](https://docs.npmjs.com/cli/v6/commands/npm-install) <br>
+```npm ci``` Downloads node_modules according to the package-lock.json. <br>
+```npm run <command>``` Run the command defined in packages.json / "scripts"
+
+### Angular CLI commands
+
+```ng build``` Builds and listens.
+
+<br><br>
+
 ## Web
 
 ### API
