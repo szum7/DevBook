@@ -80,6 +80,10 @@ curl 'https://api.github.com/users/whatever?client_id=xxx&client_secret=yyy'  //
 
 <br>
 
+## Third party softwares
+
+<br>
+
 ## Frontend website performance optimization
 
 ### App Lifecycles
@@ -298,4 +302,5 @@ requestAnimationFrame(animate);
 - FLIP nek utánanézni, mi is az
 - Webworkers (JS)
 - Memeory management (JS)
+- Cloudfront, what is it, how to set it up/use it
 
