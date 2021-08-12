@@ -315,6 +315,11 @@ Unified Modeling Language.<br/>
     - State machine diagram
     - Interaction
 
+Some special cases:
+- Interaction overview diagram: Activity + Interaction
+- Composite structure
+- Timing diagrams
+
 <br>
 
 ## TODO
