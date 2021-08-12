@@ -293,6 +293,30 @@ requestAnimationFrame(animate);
 ```
 <br>
 
+## Documenting
+
+<br>
+
+### UML
+Unified Modeling Language.<br/>
+
+#### UML types
+- UML Diagrams
+  - Structure
+    - Class diagram
+    - Component diagram
+    - Object diagram
+    - Composite structure diagram
+    - Package diagram
+    - Deployment diagram
+  - Behavior
+    - Use case diagram
+    - Activity diagram
+    - State machine diagram
+    - Interaction
+
+<br>
+
 ## TODO
 - Code metrics
 - Unit/component/integration tests
