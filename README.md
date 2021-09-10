@@ -19,6 +19,12 @@
   - [Javascript](#Javascript)
     - [JIT](#JIT)
     - [Animation optimization](#Animation-optimization)
+- [Software development](#software-development)
+  - [SOLID](#solid)
+- [Testing](#testing)
+  - [Unit testing](#unit-testing)
+  - [Component testing](#component-testing)
+  - [Integration testing](#integration-testing)
 - [TODO](#todo)
 
 <br>
@@ -319,6 +325,118 @@ Some special cases:
 - Interaction overview diagram: Activity + Interaction
 - Composite structure
 - Timing diagrams
+
+<br>
+
+## Software development
+
+### SOLID
+
+#### Single-Responsibility Principle
+"A class should have one and only one reason to change, meaning that a class should have only one job."
+
+#### Open-Closed Principle
+"Objects or entities should be open for extension but closed for modification."<br>
+This means that a class should be extendable without modifying the class itself.
+
+#### Liskov Substitution Principle
+"Every subclass or derived class should be substitutable for their base or parent class."<br>
+"If class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program."
+
+#### Interface Segregation Principle
+"A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use."<br>
+"Larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them."<br>
+
+Before SOLID:
+```
+interface ShapeInterface {
+    public function area();
+    public function volume();
+}
+```
+
+<br>
+
+After SOLID:
+```
+interface ShapeInterface {
+    public function area();
+}
+
+interface ThreeDimensionalShapeInterface {
+    public function volume();
+}
+
+class Cuboid implements ShapeInterface, ThreeDimensionalShapeInterface {
+    public function area() {
+        // calculate the surface area of the cuboid
+    }
+    public function volume() {
+        // calculate the volume of the cuboid
+    }
+}
+```
+
+#### Dependency Inversion Principle
+"Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions."<br>
+"The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, both will depend on abstractions."
+
+```
+class MySQLConnection {
+    public function connect() {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder {
+    private $dbConnection;
+    public function __construct(MySQLConnection $dbConnection) {
+        $this->dbConnection = $dbConnection;
+    }
+}
+```
+
+First, the ```MySQLConnection``` is the low-level module while the ```PasswordReminder``` is high level, but according to the definition of D in SOLID, which states to Depend on abstraction, not on concretions. This snippet above violates this principle as the ```PasswordReminder``` class is being forced to depend on the ```MySQLConnection``` class. To fix this:
+
+```
+interface DBConnectionInterface {
+    public function connect();
+}
+```
+
+```
+class MySQLConnection implements DBConnectionInterface {
+    public function connect() {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder {
+    private $dbConnection;
+    public function __construct(DBConnectionInterface $dbConnection) {
+        $this->dbConnection = $dbConnection;
+    }
+}
+```
+
+<br>
+
+## Testing
+
+<br>
+
+### Unit testing
+
+...TODO types of testing libraries in VS and implementation examples
+<br>
+
+### Component testing
+
+<br>
+
+### Integration testing
 
 <br>
 
