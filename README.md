@@ -43,6 +43,32 @@
 
 <br>
 
+# Backend structures
+### Reference projects
+#### As 'git references'
+You can include projects in your solution by referencing git repositories. These __modules__ are referenced in the ```.gitmodules``` file.
+
+```
+[submodule "submodules/obc.core"]
+	path = submodules/obc.core
+	url = git@github.com:CompanyName/obc.core.git
+[submodule "submodules/obc.authentication"]
+	path = submodules/obc.authentication
+	url = git@github.com:CompanyName/obc.authentication.git
+[submodule "submodules/obc.utils.singlesignon"]
+	path = submodules/obc.utils.signon
+	url = git@github.com:CompanyName/obc.utils.signon.git
+...
+```
+#### As simply including them
+organize to folders. Solution file in VS looks different than folder in windows explorer. Projects are outside of the solution's folder's root. TODO investigate how its done.
+#### As references
+.net framework solution (?)
+#### As nuget packages
+.net core solution
+
+<br>
+
 ## Web
 
 ### API
