@@ -7,6 +7,7 @@
 - [Command lines](#command-lines)
   - [Npm commands](#npm-commands)
   - [Angular CLI commands](#angular-cli-commands)
+- [C sharp](#c-sharp)
 - [Web](#web)
   - [API](#api)
     - [RESTful API](#restful-api)
@@ -43,7 +44,73 @@
 
 <br>
 
-# Backend structures
+## C sharp
+
+### Struct vs Class
+
+Structs are light versions of classes. Structs are value types and can be used to create objects that behave like built-in types.<br>
+<br>
+Structs share many features with classes but with the following limitations as compared to classes.
+
+- Struct cannot have a default constructor (a constructor without parameters) or a destructor.
+- Structs are value types and are copied on assignment.
+- Structs are value types while classes are reference types.
+- Structs can be instantiated without using a new operator ```Coords p; p.x = 3; p.y = 4;```
+- A struct cannot inherit from another struct or class, and it cannot be the base of a class. All structs inherit directly from System.ValueType, which inherits from System.Object.
+- Struct cannot be a base class. So, Struct types cannot abstract and are always implicitly sealed.
+- Abstract and sealed modifiers are not allowed and struct member cannot be protected or protected internals.
+- Function members in a struct cannot be abstract or virtual, and the override modifier is allowed only to the override methods inherited from System.ValueType.
+- Struct does not allow the instance field declarations to include variable initializers. But, static fields of a struct are allowed to include variable initializers.
+- A struct can implement interfaces.
+- A struct can be used as a nullable type and can be assigned a null value.
+
+#### When to use struct or classes?
+
+<table>
+	<tr>
+		<td>Struct</td>
+		<td>Class</td>
+	</tr>
+	<tr>
+		<td>Structs are value types, allocated either on the stack or inline in containing types.</td>
+		<td>Classes are reference types, allocated on the heap and garbage-collected.</td>
+	</tr>
+	<tr>
+		<td>Allocations and de-allocations of value types are in general cheaper than allocations and de-allocations of reference types.</td>
+		<td>Assignments of large reference types are cheaper than assignments of large value types.</td>
+	</tr>
+	<tr>
+		<td>In structs, each variable contains its own copy of the data (except in the case of the ref and out parameter variables), and an operation on one variable does not affect another variable.</td>
+		<td>In classes, two variables can contain the reference of the same object and any operation on one variable can affect another variable.</td>
+	</tr>
+</table>
+
+In this way, struct should be used only when you are sure that,
+- It logically represents a single value, like primitive types (int, double, etc.).
+- It is immutable. TODO what is this
+- It should not be boxed and un-boxed frequently. TODO what is this
+		
+```C#
+struct Location   
+{  
+    publicint x, y;  
+    publicLocation(int x, int y)  
+    {  
+        this.x = x;  
+        this.y = y;  
+    }  
+}  
+Location a = new Location(20, 20);  
+Location b = a;
+a.x = 100;  
+System.Console.WriteLine(a.x); // 100
+System.Console.WriteLine(b.x); // 20
+```
+
+
+<br>
+
+## Backend structures
 ### Reference projects
 #### As 'git references'
 You can include projects in your solution by referencing git repositories. These __modules__ are referenced in the ```.gitmodules``` file.
