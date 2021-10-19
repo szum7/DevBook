@@ -1,0 +1,75 @@
+Reasoning for the selected recommendation
+Aron presented himself as a full-stack engineer, he was able to show that he has some experience on both front-end and on the server side as well. He seemed stronger on the front-end, however unfortunately lacks depth of knowledge on the server-side and especially on .NET/C# fundamentals.
+I am sad to say that there were several gaps to fill in the area of web application architecture as well, independently from .Net, several questions regarding architecture were answered imprecisely, in insufficient detail, not covering the whole topic.
+Also, the answers and explanations were usually not clear and straightforward, and additional questions very easily confused the candidate. He did not seem to be familiar with talking about/explaining technology topics, or maybe he could not manage the situation well enough.
+He also needs to practice more his self-presentation, as seemed particularly inexperienced on this field.
+What was good and should be recognized
+# .Net
+- mem management: was able to elaborate high level on stack/heap, value ref types; also mentioned garbage collector, explained generations, large object heap
+- yield return: was able to define high level
+- had some idea of thread vs task differences
+- thread vs task: mentioned threadpool, also mentioned “task for .NET, thread for external”
+- object is struct or class: mentioned class
+
+# Higher Level Frameworks/Architecture
+- web development: mentioned ASP .NET webhooks (however could not explain in detail)
+- knew about ASP .NET Core middlewares
+- state management: mentioned correctly that HTTP is stateless, mentioned cookies and session ID, needed guided questions however to be able to elaborate on how the session is stored on the server side.
+- bundling: mentioned communication advantage
+- CI/CD:
+- was able to elaborate on distributed vs centralized source control
+- could describe the project's CI/CD process, guided by questions
+- what to run in the build pipeline: mentioned unit tests, code coverage
+- CD: heard about, mentioned automating deployments, could not elaborate in detail
+- non-functional requirements: was able to mention response time and security
+- how to measure performance: mentioned page load time, response time – measured by chrome dev tool
+- architectural patterns: mentioned monolith for the app he’s currently working on.
+- How to scale monoliths: mentioned vertical and horizontal scaling: was able to describe vertical, however mixed names up
+- Testing:
+-	Mentioned unit, component and module testing
+-	Gave roughly correct definitions
+-	Black box test vs white box test: gave clear definitions, internals are know for white box tests
+- How to work with legacy: write test for new features, stand up metrics
+- Why writing tests:
+-	mentioned quality gates
+-	was able to elaborate on the advantage of finding issues early in the development process
+- REST: with directed questions, was able to recall HTTP verbs, and JSON
+- API versioning: with help, was able to come up with compatibility
+What can be improved
+# .Net
+- memory model, GC: could tell a few concepts, but was not fluent and far from complete; how to find references: could not elaborate on GC root, nor did he mention compacting
+- how much stack: no; what if stack is full: no; how much heap can be in a process: not only physical memory, you can also have virtual memory (and tricks like memory compression)
+- thread vs task (inside and outside the .net process), maybe mixed threads with processes?
+- not sure of async I/O will use a thread while waiting for result
+- misconception: List is linked list
+- could not tell how Dictionary finds an item
+- There was one moment I would highlight: around 32:30 in the recording, I got a response that "there were only configuration tasks in the last few months". I understand that, and this is absolutely normal to happen in each developer's career. But the questions were about topics that are part of the fundamental knowledge for any .Net developer. If few months without active development causes such a huge loss then the fundamentals were not strong enough, or were not practiced enough to become routine.
+
+# Hands-on coding: implement LINQ Select()
+- mixed up Select with Where()
+- could not come up with an implementation
+- missed IEnumerable, Func, extension method
+- IEnumerable vs IQueryable: could not elaborate
+
+#Higher Level Frameworks/Architecture
+- asp .net core vs asp .net (framework): how to implement common functionality on a request-level: could not elaborate on ASP .NET page or application lifecycle events in detail
+- seemed surprised that NuGet existed before .Net Core (maybe only a misunderstanding?)
+- where is session stored
+- bundling: did not clearly define the latency and comms overhead that makes the bundled file cheaper to load
+- was able to talk about branching strategy, however made some contradicting statements, could not present convincing general understanding
+- quality metrics: only code coverage; target coverage: mentioned 100%, did not seem to have a clear vision (tendency, quality of tests)
+- how to measure performance: mentioned only Chrome developer tools, did not mention tools like MS appinsights; or Google Pagespeed Insights, or any method to measure performance on the application-side
+- how to deal with server app being slow: mentioned putting measurements into the code, could not elaborate on tools
+- architectural patterns; could not clearly come up with definitions, what make a monolith/microservice
+- confusion in scaling methods, could not describe horizontal scaling
+- how to get started with a legacy code project (could only tell few hints how not)
+- could not precisely define RESTful, only partially, with several guiding questions; API versioning
+- what is a programming language? I could not clearly understand what he considers a programming language
+Suggestions to the Candidate, materials and links
+- fill gaps in .Net fundamentals
+- learn about architectural patterns (at least monolith vs microservices vs SOA)
+- read about software quality metrics, tools and techniques of measuring software performance
+- practice coding without an IDE (codewars.com, codingame, leetcode, hackerrank...)
+- rehearse the presentation (more), ask peers for feedback; focus on highlighting key facts and achievements; set up context for easier understanding, don't assume that everyone knows your project
+- talking is a key part of presentation, it is the main feature and slides are there for support; practice more to talk fluently during presentation
+- if you list an area to the main slide as focus area then be prepared for questions in that area, and should be able to answer them smoothly and precisely (e.g., RESTful API)
