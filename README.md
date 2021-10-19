@@ -106,7 +106,21 @@ a.x = 100;
 System.Console.WriteLine(a.x); // 100
 System.Console.WriteLine(b.x); // 20
 ```
+<br>
 
+### Misc
+
+#### The new keyword
+
+When you "new" a reference type, three things happen. 
+- First, the memory manager allocates space from long term storage. 
+- Second, a reference to that space is passed to the constructor, which initializes the instance. 
+- Third, that reference is passed back to the caller.
+
+When you "new" a value type, three things happen. 
+- First, the memory manager allocates space from short term storage. 
+- Second, the constructor is passed a reference to the short term storage location. 
+- After the constructor runs, the value that was in the short-term storage location is copied to the storage location for the value, wherever that happens to be. Remember, variables of value type store the actual value.
 
 <br>
 
