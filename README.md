@@ -4,6 +4,7 @@
 
 ## Table of contents
 
+- [Exercise program](#exercise-program)
 - [Command lines](#command-lines)
   - [Npm commands](#npm-commands)
   - [Angular CLI commands](#angular-cli-commands)
@@ -27,6 +28,21 @@
   - [Component testing](#component-testing)
   - [Integration testing](#integration-testing)
 - [TODO](#todo)
+
+<br>
+
+## Exercise program
+
+For practice and reference, create a .NET Core solution with the following:
+- Splunk logging
+- Dependency injection
+- Code coverage and other (?) analytics
+- Unit tests
+- Integration tests
+- System tests
+- Acceptance tests
+- Other test? (module?, ...?)
+- ...
 
 <br>
 
