@@ -1,0 +1,3 @@
+- performance counters. Használják szervereken élesben is? Hogy? Vagy erre 3rd party softwareket használnak amik ezt használják fel?
+- példák olyan alkalmazásokra amik nem REST
+- példák olyan alkalmazásokra amik nem SOLID

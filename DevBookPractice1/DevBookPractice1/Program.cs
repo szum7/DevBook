@@ -1,4 +1,6 @@
-﻿using DevBookPractice1.Chapters.Diagnostics;
+﻿using DevBookPractice1.Chapters.Chapter13.Diagnostics;
+using DevBookPractice1.Chapters.Chapter14.Asynchronity;
+using DevBookPractice1.Chapters.Chapter14.TimCorey;
 using System;
 
 namespace DevBookPractice1
@@ -7,10 +9,14 @@ namespace DevBookPractice1
     {
         static void Main(string[] args)
         {
-            var diagnostics = new DiagnosticsMain();
+            //var diagnostics = new DiagnosticsMain();
+            //var examineProcesses = new ExamineProcesses();
+            //var asynchronity = new AsynchronityMain();
+            var asyncAwaitTimCorey = new AsyncAwaitTimCorey();
 
             // END
-            Console.WriteLine("END OF PROGRAM");
+            Console.WriteLine("\n\nEND OF PROGRAM");
+            Console.ReadKey();
         }
     }
 }
