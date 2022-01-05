@@ -573,4 +573,5 @@ class PasswordReminder {
 - Webworkers (JS)
 - Memeory management (JS)
 - Cloudfront, what is it, how to set it up/use it
+- Monolith vs Microservices vs SOA
 
