@@ -1,5 +1,7 @@
 # DevBook
 
+This is an online book with a collection of useful development topics, written in GitHub .md format.
+
 <br>
 
 ## Table of contents
