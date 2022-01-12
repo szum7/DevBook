@@ -23,6 +23,7 @@ This is an online book with a collection of useful development topics, written i
   - [Javascript](#Javascript)
     - [JIT](#JIT)
     - [Animation optimization](#Animation-optimization)
+- [Technology types](#technology-types)
 - [Software development](#software-development)
   - [SOLID](#solid)
 - [Architecture](#architecture)
@@ -49,6 +50,7 @@ For practice and reference, create a .NET Core solution with the following:
 - System tests
 - Acceptance tests
 - Other test? (module?, ...?)
+- Microservice architektúra, vagy más api-api kommunikáció
 - ...
 
 <br>
@@ -457,6 +459,12 @@ Some special cases:
 - Timing diagrams
 
 <br>
+
+## Technology types
+
+### ASP.NET
+#### ASP.NET page life cicle
+<a href="https://docs.microsoft.com/en-us/previous-versions/ms178472(v=vs.140)?redirectedfrom=MSDN#general_page_lifecycle_stages">docs.microsoft: ASP.NET Page Life Cycle Overview</a>
 
 ## Software development
 
