@@ -29,6 +29,8 @@ This is an online book with a collection of useful development topics, written i
   - [Unit testing](#unit-testing)
   - [Component testing](#component-testing)
   - [Integration testing](#integration-testing)
+- [Glossary](#glossary)
+  - [Software](#software)
 - [TODO](#todo)
 
 <br>
@@ -563,6 +565,34 @@ class PasswordReminder {
 
 ### Integration testing
 
+
+## Glossary
+
+### Service
+
+#### Hosting
+- **Azure**<br>
+It offers Platform as a Service (PaaS) and Infrastructure as a Service (IaaS).<br>
+- **AWS (Amazon Web Services)**<br>
+It offers Platform as a Service (PaaS), Infrastructure as a Service (IaaS), and Software as a Service (Saas)<br>
+
+### Software
+
+#### CI: Continous Integration
+- **TeamCity (JetBrains)**<br>
+
+#### CD: Continous Delivery
+- **Octopus Deploy**<br>
+Not sure if it's purely CD. An automated software deployment and release management server. A unified DevOps Automation platform for your team. <br>
+
+#### Logging
+- **Splunk**<br>
+
+#### Diagnostics
+- **Windows Admin Center**<br>
+A real-time interactive, graphical view of  It uses server **performance counters**.<br>
+Allows you to steamline everyday tasks and connect to Aure for hybrid scenarios.<br>
+<a href="https://youtu.be/two5LhhZs2A">Youtube: How to monitor server performance with Windows Admin Center</a>
 <br>
 
 ## TODO
@@ -576,4 +606,5 @@ class PasswordReminder {
 - Memeory management (JS)
 - Cloudfront, what is it, how to set it up/use it
 - Monolith vs Microservices vs SOA
+- Glossaryba ilyeneket keresni: SQL performance figyelő (query elemző); server-side performance monitorozó; Logoló software; CI/CD fajták
 
