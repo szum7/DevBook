@@ -25,11 +25,14 @@ This is an online book with a collection of useful development topics, written i
     - [Animation optimization](#Animation-optimization)
 - [Software development](#software-development)
   - [SOLID](#solid)
+- [Architecture](#architecture)
+  - [Microservices](#Microservices)
 - [Testing](#testing)
   - [Unit testing](#unit-testing)
   - [Component testing](#component-testing)
   - [Integration testing](#integration-testing)
 - [Glossary](#glossary)
+  - [Services](#services)
   - [Software](#software)
 - [TODO](#todo)
 
@@ -547,6 +550,12 @@ class PasswordReminder {
     }
 }
 ```
+
+## Architecture
+
+### Monolith
+### SOA
+### Microservices
 
 <br>
 
