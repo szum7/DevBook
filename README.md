@@ -614,6 +614,7 @@ Allows you to steamline everyday tasks and connect to Aure for hybrid scenarios.
 
 ## TODO
 - Authentication (OAUTH, ... (?))
+- Rich client vs thin client
 - Code metrics
 - Unit/component/integration tests
 - SOLID
