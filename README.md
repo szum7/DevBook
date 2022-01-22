@@ -613,6 +613,7 @@ Allows you to steamline everyday tasks and connect to Aure for hybrid scenarios.
 <br>
 
 ## TODO
+- Authentication (OAUTH, ... (?))
 - Code metrics
 - Unit/component/integration tests
 - SOLID
