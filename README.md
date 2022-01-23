@@ -613,6 +613,7 @@ Allows you to steamline everyday tasks and connect to Aure for hybrid scenarios.
 <br>
 
 ## TODO
+- .net benchmark (BenchmarkDotNet 0.13.1 nuget)
 - Authentication (OAUTH, ... (?))
 - Rich client vs thin client
 - Code metrics
